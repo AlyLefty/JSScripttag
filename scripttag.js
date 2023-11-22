@@ -21,10 +21,12 @@ function getCookie(name) {
 }
 
 //get params
+console.log('XX');
 const url_string = window.location.href;
 const url_object = new URL(url_string);
 const my_param = url_object.searchParams.get("lefty");
 
+console.log(my_param);
 if (my_param != null) {
 
     //set cookie
