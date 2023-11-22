@@ -23,17 +23,17 @@ function getCookie(name) {
 //get params
 const url_string = window.location.href;
 const url_object = new URL(url_string);
-const my_param = url_object.searchParams.get("my_param");
+const my_param = url_object.searchParams.get("lefty");
 
 if (my_param != null) {
 
     //set cookie
-    setCookie('my_param', my_param);
+    setCookie('lefty', my_param);
 
 } else {
 
     //get cookie
-    let my_param_cookie = getCookie('my_param');
+    let my_param_cookie = getCookie('lefty');
 
     if (my_param_cookie) {
 
@@ -43,7 +43,7 @@ if (my_param != null) {
         const url_pathname = url_object.pathname;
         const url_params = url_object.search;
         const url_seperator = url_params == '' ? '?' : '&';
-        const url_my_param = my_param == null ? 'my_param=' + my_param_cookie : my_param;
+        const url_my_param = my_param == null ? 'lefty=' + my_param_cookie : my_param;
 
         url_all_params = url_pathname + url_params + url_seperator + url_my_param;
 
